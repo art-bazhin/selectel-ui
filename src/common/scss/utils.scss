@@ -1,0 +1,229 @@
+@import './media.scss';
+
+$viewports: ('desktop');
+
+$spacings: (
+  0: 0,
+  red: var(--sui-spacing-red),
+  orange: var(--sui-spacing-orange),
+  yellow: var(--sui-spacing-yellow),
+  green: var(--sui-spacing-green),
+  blue: var(--sui-spacing-blue),
+  indigo: var(--sui-spacing-indigo),
+  violet: var(--sui-spacing-violet),
+  olive: var(--sui-spacing-olive),
+  teal: var(--sui-spacing-teal),
+  cyan: var(--sui-spacing-cyan),
+);
+
+@mixin helpers($prefix) {
+  // SPACINGS
+  @each $name, $value in $spacings {
+    $val: '-' + $name;
+
+    .#{$prefix}u-m#{$val} {
+      margin: $value !important;
+    }
+
+    .#{$prefix}u-mt#{$val} {
+      margin-top: $value !important;
+    }
+
+    .#{$prefix}u-mr#{$val} {
+      margin-right: $value !important;
+    }
+
+    .#{$prefix}u-mb#{$val} {
+      margin-bottom: $value !important;
+    }
+
+    .#{$prefix}u-ml#{$val} {
+      margin-left: $value !important;
+    }
+
+    .#{$prefix}u-mv#{$val} {
+      margin-top: $value !important;
+      margin-bottom: $value !important;
+    }
+
+    .#{$prefix}u-mh#{$val} {
+      margin-left: $value !important;
+      margin-right: $value !important;
+    }
+
+    .#{$prefix}u-p#{$val} {
+      padding: $value !important;
+    }
+
+    .#{$prefix}u-pt#{$val} {
+      padding-top: $value !important;
+    }
+
+    .#{$prefix}u-pr#{$val} {
+      padding-right: $value !important;
+    }
+
+    .#{$prefix}u-pb#{$val} {
+      padding-bottom: $value !important;
+    }
+
+    .#{$prefix}u-pl#{$val} {
+      padding-left: $value !important;
+    }
+
+    .#{$prefix}u-pv#{$val} {
+      padding-top: $value !important;
+      padding-bottom: $value !important;
+    }
+
+    .#{$prefix}u-ph#{$val} {
+      padding-left: $value !important;
+      padding-right: $value !important;
+    }
+  }
+
+  // DISPLAY
+  .#{$prefix}u-flex {
+    display: flex !important;
+  }
+
+  .#{$prefix}u-block {
+    display: inline-block !important;
+  }
+
+  .#{$prefix}u-inline {
+    display: inline !important;
+  }
+
+  .#{$prefix}u-inline-block {
+    display: inline-block !important;
+  }
+
+  .#{$prefix}u-none {
+    display: none !important;
+  }
+
+  // FLEXBOX
+  .#{prefix}u-flex-wrap {
+    flex-wrap: wrap !important;
+  }
+
+  .#{prefix}u-flex-nowrap {
+    flex-wrap: nowrap !important;
+  }
+
+  .#{prefix}u-flex-left {
+    justify-content: flex-start !important;
+  }
+
+  .#{prefix}u-flex-center {
+    justify-content: center !important;
+  }
+
+  .#{prefix}u-flex-right {
+    justify-content: flex-end !important;
+  }
+
+  .#{prefix}u-flex-between {
+    justify-content: space-between !important;
+  }
+
+  .#{prefix}u-flex-top {
+    align-items: flex-start !important;
+  }
+
+  .#{prefix}u-flex-middle {
+    align-items: center;
+  }
+
+  .#{prefix}u-flex-bottom {
+    align-items: flex-end !important;
+  }
+
+  .#{prefix}u-flex-stretch {
+    align-items: stretch !important;
+  }
+
+  .#{prefix}u-flex-baseline {
+    align-items: baseline !important;
+  }
+
+  .#{prefix}u-flex-row {
+    flex-direction: row !important;
+  }
+
+  .#{prefix}u-flex-column {
+    flex-direction: column !important;
+  }
+
+  .#{prefix}u-flex-shrink {
+    flex-shrink: 1 !important;
+  }
+
+  .#{prefix}u-flex-noshrink {
+    flex-shrink: 0 !important;
+  }
+
+  .#{prefix}u-flex-grow {
+    flex-grow: 1 !important;
+  }
+
+  .#{prefix}u-flex-nogrow {
+    flex-grow: 0 !important;
+  }
+
+  // TEXT
+  .#{$prefix}u-text-left {
+    text-align: left !important;
+  }
+
+  .#{$prefix}u-text-center {
+    text-align: center !important;
+  }
+
+  .#{$prefix}u-text-right {
+    text-align: right !important;
+  }
+
+  .#{$prefix}u-text-top {
+    vertical-align: top !important;
+  }
+
+  .#{$prefix}u-text-middle {
+    vertical-align: middle !important;
+  }
+
+  .#{$prefix}u-text-bottom {
+    vertical-align: bottom !important;
+  }
+
+  .#{$prefix}u-text-nowrap {
+    white-space: nowrap !important;
+  }
+
+  .#{$prefix}u-text-wrap {
+    white-space: normal !important;
+  }
+
+  .#{$prefix}u-text-regular {
+    font-weight: 400 !important;
+  }
+
+  .#{$prefix}u-text-medium {
+    font-weight: 500 !important;
+  }
+
+  .#{$prefix}u-text-semibold {
+    font-weight: 600 !important;
+  }
+}
+
+@include helpers('');
+
+@include media-tablet {
+  @include helpers('tablet:');
+}
+
+@include media-desktop {
+  @include helpers('desktop:');
+}
