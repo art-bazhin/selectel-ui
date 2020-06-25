@@ -1,0 +1,49 @@
+{
+  "name": "selectel-ui",
+  "description": "",
+  "homepage": "",
+  "repository": "",
+  "bugs": "",
+  "version": "0.0.1",
+  "main": "dist/selectel-ui.js",
+  "types": "dist/selectel-ui.d.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^8.1.0",
+    "autoprefixer": "^9.8.3",
+    "cssnano": "^4.1.10",
+    "cz-conventional-changelog": "^3.2.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1",
+    "postcss-import": "^12.0.1",
+    "prettier": "^2.0.5",
+    "rollup": "^2.16.1",
+    "rollup-plugin-terser": "^6.1.0",
+    "rollup-plugin-ts": "^1.2.24",
+    "rollup-plugin-uglify": "^6.0.4",
+    "standard-version": "^8.0.0",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.5"
+  },
+  "scripts": {
+    "build": "rollup -c && gulp",
+    "dev:script": "rollup -c -w",
+    "dev:style": "gulp dev",
+    "commit": "git-cz",
+    "release": "standard-version"
+  },
+  "files": [
+    "dist"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "lit-element": "^2.3.1"
+  }
+}
