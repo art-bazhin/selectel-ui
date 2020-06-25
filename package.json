@@ -9,11 +9,17 @@
   "types": "dist/selectel-ui.d.ts",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-typescript": "^7.10.1",
     "@rollup/plugin-node-resolve": "^8.1.0",
+    "@storybook/web-components": "^5.3.19",
     "autoprefixer": "^9.8.3",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
     "cz-conventional-changelog": "^3.2.0",
     "gulp": "^4.0.2",
+    "gulp-livereload": "^4.0.2",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
@@ -25,6 +31,7 @@
     "rollup-plugin-ts": "^1.2.24",
     "rollup-plugin-uglify": "^6.0.4",
     "standard-version": "^8.0.0",
+    "ts-loader": "^7.0.5",
     "tslib": "^2.0.0",
     "typescript": "^3.9.5"
   },
@@ -32,8 +39,11 @@
     "build": "rollup -c && gulp",
     "dev:script": "rollup -c -w",
     "dev:style": "gulp dev",
+    "dev:serve": "gulp serve",
     "commit": "git-cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "storybook": "start-storybook --ci -s ./dist -p 6006",
+    "build-storybook": "build-storybook -s ./dist"
   },
   "files": [
     "dist"
