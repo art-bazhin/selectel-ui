@@ -11,5 +11,15 @@ html {
 body,
 button {
   font-family: 'Manrope', sans-serif;
-  color: var(--sui-theme-text);
+  color: var(--sui-theme-fg);
+}
+
+body {
+  background: var(--sui-theme-bg);
+}
+
+.sui-theme-light,
+.sui-theme-dark {
+  background: var(--sui-theme-bg);
+  color: var(--sui-theme-fg);
 }

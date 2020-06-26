@@ -1,5 +1,9 @@
 module.exports = {
-  stories: ['../stories/**/*.stories.ts'],
+  stories: ['../src/**/*.stories.ts'],
+  addons: [
+    '@storybook/addon-knobs/register',
+    '@storybook/addon-backgrounds/register',
+  ],
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.(ts)$/,

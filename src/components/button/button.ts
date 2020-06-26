@@ -26,7 +26,7 @@ export class SuiButton extends SuiElement {
   size: 'xs' | 's' | 'm' | 'l' = 'm';
 
   @property()
-  type: 'primary' | 'seconday' = 'primary';
+  type: 'primary' | 'secondary' = 'primary';
 
   @property({ type: Boolean })
   disabled = false;
