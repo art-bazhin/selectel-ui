@@ -1,3 +1,30 @@
+@mixin sui-button-secondary-hovers {
+  &:hover {
+    background: none;
+    color: var(--sui-theme-interactive);
+  }
+
+  &:active {
+    color: var(--sui-theme-interactive);
+    background: var(--sui-theme-interactive-05a);
+    border-color: var(--sui-theme-interactive);
+  }
+}
+
+@mixin sui-button-secondary-hovers-inverted {
+  &:hover {
+    color: var(--sui-theme-light);
+    background: var(--sui-theme-interactive);
+    border-color: var(--sui-theme-interactive);
+  }
+
+  &:active {
+    color: var(--sui-theme-light);
+    background: var(--sui-theme-interactive-alt);
+    border-color: var(--sui-theme-interactive-alt);
+  }
+}
+
 .sui-button {
   text-transform: uppercase;
   display: inline-block;
@@ -46,16 +73,7 @@
     color: var(--sui-theme-fg);
     background: none;
 
-    &:hover {
-      background: none;
-      color: var(--sui-theme-interactive);
-    }
-
-    &:active {
-      color: var(--sui-theme-interactive);
-      background: var(--sui-theme-interactive-05a);
-      border-color: var(--sui-theme-interactive);
-    }
+    @include sui-button-secondary-hovers;
   }
 
   &--inverted {
@@ -67,17 +85,7 @@
       color: var(--sui-theme-bg);
       background: none;
 
-      &:hover {
-        color: var(--sui-theme-light);
-        background: var(--sui-theme-interactive);
-        border-color: var(--sui-theme-interactive);
-      }
-
-      &:active {
-        color: var(--sui-theme-light);
-        background: var(--sui-theme-interactive-alt);
-        border-color: var(--sui-theme-interactive-alt);
-      }
+      @include sui-button-secondary-hovers-inverted;
     }
   }
 
@@ -85,5 +93,15 @@
     opacity: 0.2;
     pointer-events: none;
     cursor: not-allowed;
+  }
+}
+
+.sui-theme-dark .sui-button {
+  &.sui-button--type_secondary {
+    @include sui-button-secondary-hovers-inverted;
+
+    &.sui-button--inverted {
+      @include sui-button-secondary-hovers;
+    }
   }
 }
