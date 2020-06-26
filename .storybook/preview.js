@@ -14,11 +14,6 @@ addParameters({
   docs: {
     iframeHeight: '200px',
   },
-  backgrounds: [
-    { name: 'bg', value: 'var(--sui-theme-bg)', default: true },
-    { name: 'bg-alt', value: 'var(--sui-theme-bg-alt)' },
-    { name: 'base', value: 'var(--sui-theme-fg)' },
-  ],
 });
 
 // configure(require.context('../stories', true, /\.stories\.(js|mdx)$/), module);
