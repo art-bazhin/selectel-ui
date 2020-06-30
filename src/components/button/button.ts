@@ -5,12 +5,6 @@ import { createBemFn } from '../../common/ts/utils';
 const ELEMENT_NAME = 'sui-button';
 const bem = createBemFn(ELEMENT_NAME);
 
-/**
- * An example element.
- *
- * @slot - This element has a slot
- * @csspart button - The button
- */
 @customElement(ELEMENT_NAME)
 export class SuiButton extends SuiElement {
   @property()
@@ -23,10 +17,13 @@ export class SuiButton extends SuiElement {
   target: '_blank' | '_parent' | '_self' | '_top' = '_self';
 
   @property()
+  type: 'submit' | 'reset' | 'button' = 'submit';
+
+  @property()
   size: 'xs' | 's' | 'm' | 'l' = 'm';
 
   @property()
-  type: 'primary' | 'secondary' = 'primary';
+  kind: 'primary' | 'secondary' = 'primary';
 
   @property({ type: Boolean })
   disabled = false;
@@ -43,7 +40,7 @@ export class SuiButton extends SuiElement {
   render() {
     const buttonClass = bem(null, {
       size: this.size,
-      type: this.type,
+      kind: this.kind,
       disabled: this.disabled,
       inverted: this.inverted,
     });
@@ -52,7 +49,7 @@ export class SuiButton extends SuiElement {
       ? html`<a href=${this.href} target=${this.target} class=${buttonClass}
           >${this.text}</a
         >`
-      : html`<button class=${buttonClass}>
+      : html`<button type=${this.type} class=${buttonClass}>
           ${this.text}
         </button>`;
   }

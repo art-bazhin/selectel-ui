@@ -69,7 +69,7 @@
     padding: 15px 31px;
   }
 
-  &--type_secondary {
+  &--kind_secondary {
     color: var(--sui-theme-fg);
     background: none;
 
@@ -81,7 +81,7 @@
     background: var(--sui-theme-bg);
     border-color: var(--sui-theme-bg);
 
-    &.sui-button--type_secondary {
+    &.sui-button--kind_secondary {
       color: var(--sui-theme-bg);
       background: none;
 
@@ -97,7 +97,7 @@
 }
 
 .sui-theme-dark .sui-button {
-  &.sui-button--type_secondary {
+  &.sui-button--kind_secondary {
     @include sui-button-secondary-hovers-inverted;
 
     &.sui-button--inverted {
