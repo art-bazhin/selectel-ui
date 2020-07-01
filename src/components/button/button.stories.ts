@@ -7,7 +7,11 @@ export const button = () => {
   const buttonText = text('text', 'Click Me');
   const type = select('type', ['submit', 'reset', 'button'], 'submit');
   const href = text('href', '');
-  const target = select('target', ['_self', '_blank', '_parent', '_top'], '_self');
+  const target = select(
+    'target',
+    ['_self', '_blank', '_parent', '_top'],
+    '_self'
+  );
   const size = select('size', ['xs', 's', 'm', 'l'], 'm');
   const kind = select('kind', ['primary', 'secondary'], 'primary');
   const inverted = boolean('inverted', false);

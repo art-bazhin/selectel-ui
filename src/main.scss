@@ -6,7 +6,9 @@
 @import './common/scss/reset.scss';
 @import './common/scss/base.scss';
 
-@import './components/h/h.scss';
+@import './components/typography/h.scss';
+@import './components/typography/p.scss';
+
 @import './components/button/button.scss';
 
 @import './components/my-element/my-element.scss';

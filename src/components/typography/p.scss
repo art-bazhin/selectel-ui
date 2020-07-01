@@ -1,0 +1,39 @@
+body,
+p,
+.sui-p1 {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+
+  @include media-desktop {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+* + p,
+* + .sui-p1 {
+  margin-top: 12px;
+
+  @include media-desktop {
+    margin-top: 20px;
+  }
+}
+
+.sui-p2 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+* + .sui-p2 {
+  margin-top: 12px;
+}
+
+.sui-p3 {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+* + .sui-p3 {
+  margin-top: 8px;
+}
