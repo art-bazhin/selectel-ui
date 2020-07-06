@@ -31,12 +31,6 @@ export class SuiButton extends SuiElement {
   @property({ type: Boolean })
   inverted = false;
 
-  /**
-   * The number of times the button has been clicked.
-   */
-  @property({ type: Number, reflect: false })
-  count = 0;
-
   render() {
     const buttonClass = bem(null, {
       size: this.size,
@@ -54,9 +48,3 @@ export class SuiButton extends SuiElement {
         </button>`;
   }
 }
-
-// declare global {
-//   interface HTMLElementTagNameMap {
-//     'my-element': MyElement;
-//   }
-// }

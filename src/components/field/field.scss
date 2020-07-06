@@ -1,0 +1,32 @@
+.sui-field {
+  &--disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  &--inverted {
+    color: var(--sui-theme-bg);
+  }
+}
+
+.sui-field__label {
+  font-size: 14px;
+  line-height: 20px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.sui-field__error {
+  font-size: 12px;
+  line-height: 16px;
+  display: block;
+  margin-top: 4px;
+  color: var(--sui-theme-error);
+}
+
+.sui-field__comment {
+  font-size: 12px;
+  line-height: 16px;
+  display: block;
+  margin-top: 4px;
+}

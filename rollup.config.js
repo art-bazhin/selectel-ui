@@ -18,12 +18,7 @@ export default [
         browserslist: {
           path: null,
         },
-        tsconfig: {
-          target: 'ES2015',
-          module: 'es2015',
-          experimentalDecorators: true,
-          strict: true,
-        },
+        tsconfig: 'tsconfig.json',
       }),
       terser(),
     ],
@@ -34,14 +29,10 @@ export default [
     plugins: [
       resolve(),
       ts({
-        browserslist: null,
-        tsconfig: {
-          target: 'ES2015',
-          module: 'es2015',
-          experimentalDecorators: true,
-          declaration: true,
-          strict: true,
+        browserslist: {
+          path: null,
         },
+        tsconfig: 'tsconfig.json',
       }),
     ],
     output: { file: pkg.main, format: 'es' },
