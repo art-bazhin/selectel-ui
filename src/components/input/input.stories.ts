@@ -12,6 +12,8 @@ export const input = () => {
   const errorText = text('errorText', 'Error text');
   const disabled = boolean('disabled', false);
   const size = select('size', ['xs', 's', 'm', 'l'], 'm');
+  const width = select('width', ['m', 'l', 'full'], 'm');
+  const layout = select('layout', ['vertical', 'horizontal'], 'vertical');
   const inverted = boolean('inverted', false);
 
   return wrapStory(
@@ -19,13 +21,15 @@ export const input = () => {
       <sui-input
         .value=${value}
         size=${size}
+        width=${width}
+        layout=${layout}
         label=${label}
         placeholder=${placeholder}
         comment=${comment}
         ?error=${error}
         errorText=${errorText}
         ?disabled=${disabled}
-        @valueChange=${action('valueChange')}
+        @input=${action('input')}
         ?inverted=${inverted}
       ></sui-input>
     `

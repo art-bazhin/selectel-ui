@@ -1,5 +1,3 @@
-body,
-p,
 .sui-p1 {
   font-size: 16px;
   line-height: 20px;
@@ -11,7 +9,6 @@ p,
   }
 }
 
-* + p,
 * + .sui-p1 {
   margin-top: 12px;
 
@@ -20,11 +17,14 @@ p,
   }
 }
 
+body,
+p,
 .sui-p2 {
   font-size: 16px;
   line-height: 20px;
 }
 
+* + p,
 * + .sui-p2 {
   margin-top: 12px;
 }

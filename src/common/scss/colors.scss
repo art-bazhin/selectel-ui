@@ -23,14 +23,14 @@ $color-white-10a: change-color($color-white, $alpha: 0.1);
 $color-cool-gray-30: mix($color-cool-gray, $color-white, 30);
 $color-dark-gray: mix($color-cool-gray, $color-data-blue, 20);
 
-$color-signal-red-05a: change-color($color-signal-red, $alpha: 0.05);
+$color-signal-red-10a: change-color($color-signal-red, $alpha: 0.1);
 
 // THEME COLORS
 :root,
 .sui-theme-light {
   --sui-theme-interactive: #{$color-signal-red};
   --sui-theme-interactive-alt: #{$color-signal-red-dark};
-  --sui-theme-interactive-05a: #{$color-signal-red-05a};
+  --sui-theme-interactive-10a: #{$color-signal-red-10a};
 
   --sui-theme-error: #{$color-error};
 

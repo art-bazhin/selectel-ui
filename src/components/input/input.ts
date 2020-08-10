@@ -16,17 +16,11 @@ export class SuiInput extends SuiField {
   @property()
   type: 'text' | 'password' | 'email' = 'text';
 
-  @property()
-  size: 'xs' | 's' | 'm' | 'l' = 'm';
-
   private handleInput(e: Event) {
     const newValue = (e.target as HTMLInputElement).value;
     if (newValue === this.value) return;
 
     this.value = newValue;
-    const event = new CustomEvent('valueChange', { detail: newValue });
-
-    this.dispatchEvent(event);
   }
 
   renderInner() {

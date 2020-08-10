@@ -7,6 +7,48 @@
   &--inverted {
     color: var(--sui-theme-bg);
   }
+
+  &--layout_horizontal {
+    display: flex;
+
+    .sui-field__label {
+      font-size: 18px;
+      line-height: 24px;
+      margin-right: 48px;
+      white-space: nowrap;
+
+      &--size_xs {
+        margin-top: 6px;
+        font-size: 16px;
+        margin-right: 24px;
+      }
+
+      &--size_s {
+        margin-top: 8px;
+      }
+
+      &--size_m {
+        margin-top: 12px;
+      }
+
+      &--size_l {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+.sui-field__wrap {
+  width: 100%;
+  max-width: 292px;
+
+  &--width_l {
+    max-width: 400px;
+  }
+
+  &--width_full {
+    max-width: 100%;
+  }
 }
 
 .sui-field__label {

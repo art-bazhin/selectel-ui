@@ -25,7 +25,13 @@ export abstract class SuiField extends SuiElement {
   inverted = false;
 
   @property()
-  layout: 'horizontal' | 'vertical' = 'vertical';
+  layout: 'vertical' | 'horizontal' = 'vertical';
+
+  @property()
+  size: 'xs' | 's' | 'm' | 'l' = 'm';
+
+  @property()
+  width: 'm' | 'l' | 'full' = 'm';
 
   protected abstract renderInner(): TemplateResult;
 
@@ -39,19 +45,20 @@ export abstract class SuiField extends SuiElement {
         })}
       >
         ${this.label
-          ? html`<label class=${bem('label')}>${this.label}</label>`
+          ? html`<label class=${bem('label', { size: this.size })}
+              >${this.label}${this.layout === 'horizontal' ? ':' : ''}</label
+            >`
           : null}
 
-        <div>
+        <div class=${bem('wrap', { width: this.width })}>
           ${this.renderInner()}
+          ${this.error && this.errorText
+            ? html`<div class=${bem('error')}>${this.errorText}</div>`
+            : null}
+          ${this.comment
+            ? html`<div class=${bem('comment')}>${this.comment}</div>`
+            : null}
         </div>
-
-        ${this.error && this.errorText
-          ? html`<div class=${bem('error')}>${this.errorText}</div>`
-          : null}
-        ${this.comment
-          ? html`<div class=${bem('comment')}>${this.comment}</div>`
-          : null}
       </div>
     `;
   }
