@@ -9,7 +9,7 @@ export default [
     input: 'src/main.ts',
     output: {
       name: 'selectelUi',
-      file: 'dist/selectel-ui.iife.min.js',
+      file: 'dist/selectel-ui.min.js',
       format: 'iife',
     },
     plugins: [
